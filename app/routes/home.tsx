@@ -5,6 +5,36 @@ import phone from "../components/images/iPhone-13-PRO-www.lawplusgh.com.png"
 import pos from "../components/images/Macbook-Air-pos-online-rho.vercel.app.png"
 import tes from "../components/images/i.png"
 import { Link } from "react-router"
+import type { MetaFunction } from "react-router"
+
+export const meta: MetaFunction = () => {
+    return [
+        { title: "Mends Gyan - Software Developer | Modern Web & Mobile Solutions" },
+        { 
+            name: "description", 
+            content: "Passionate Software Developer specializing in modern web applications, mobile development, and API solutions. Building scalable, user-friendly applications with React, Next.js, TypeScript, and more." 
+        },
+        { name: "keywords", content: "software developer, web development, mobile development, React, Next.js, TypeScript, API development, full-stack developer, Ghana developer" },
+        { name: "author", content: "Mends Gyan" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        
+        // Open Graph / Facebook
+        { property: "og:type", content: "website" },
+        { property: "og:title", content: "Mends Gyan - Software Developer | Modern Web & Mobile Solutions" },
+        { property: "og:description", content: "Passionate Software Developer specializing in modern web applications, mobile development, and API solutions. Building scalable, user-friendly applications." },
+        { property: "og:site_name", content: "Mends Gyan Portfolio" },
+        
+        // Twitter
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: "Mends Gyan - Software Developer | Modern Web & Mobile Solutions" },
+        { name: "twitter:description", content: "Passionate Software Developer specializing in modern web applications, mobile development, and API solutions. Building scalable, user-friendly applications." },
+        
+        // Additional SEO tags
+        { name: "robots", content: "index, follow" },
+        { name: "theme-color", content: "#25262a" },
+        { name: "msapplication-TileColor", content: "#25262a" },
+    ]
+}
 
 export default function Home() {
     const [currentTestimonial, setCurrentTestimonial] = useState(0)
