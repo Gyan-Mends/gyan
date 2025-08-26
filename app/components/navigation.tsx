@@ -5,6 +5,7 @@ import { Link } from "react-router";
 const navigation = [
     { name: "Home", to: "/", isExternal: true },
     { name: "Portfolio", to: "/portfolio", isExternal: true },
+    { name: "Contact", to: "/contact", isExternal: true },
 ];
 
 export default function Navigation() {
@@ -99,7 +100,11 @@ export default function Navigation() {
                                         <Link 
                                             key={item.name}
                                             to={item.to} 
-                                            className="text-white hover:text-orange-200 font-medium transition-colors duration-200 py-2"
+                                            className={`font-medium transition-colors duration-200 py-2 ${
+                                                item.name === 'Contact' 
+                                                    ? 'bg-[#FFAF29] text-black px-6 py-3 rounded-full text-center hover:bg-[#e89d24]' 
+                                                    : 'text-white hover:text-orange-200'
+                                            }`}
                                             onClick={() => setMobileMenuOpen(false)}
                                         >
                                             {item.name}
