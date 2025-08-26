@@ -42,10 +42,10 @@ export default function Home() {
 
     const project1Ref = useRef(null)
     const project1InView = useInView(project1Ref, { once: false, threshold: 0.2 })
-    
+
     const project2Ref = useRef(null)
     const project2InView = useInView(project2Ref, { once: false, threshold: 0.2 })
-    
+
     const statsRef = useRef(null)
     const statsInView = useInView(statsRef, { once: false, threshold: 0.2 })
 
@@ -99,11 +99,11 @@ export default function Home() {
                                 </div>
                             </div>
 
-                           <Link to="/portfolio">
-                           <button className="bg-[#FFAF29] hover:bg-[#e89d24] text-black font-medium px-6 py-3 sm:px-8 rounded-lg transition-colors">
-                                Browse Projects
-                            </button>
-                           </Link>
+                            <Link to="/portfolio">
+                                <button className="bg-[#FFAF29] hover:bg-[#e89d24] text-black font-medium px-6 py-3 sm:px-8 rounded-lg transition-colors">
+                                    Browse Projects
+                                </button>
+                            </Link>
                         </motion.div>
 
 
@@ -229,7 +229,7 @@ export default function Home() {
                                     <li>🚀 Experienced in modern frameworks and agile development</li>
                                     <li>🤝 Dedicated to collaboration, problem-solving, and continuous learning</li>
                                 </ul>
-                                <button 
+                                <button
                                     onClick={() => {
                                         setIsDownloading(true)
                                         window.location.href = 'https://docs.google.com/document/d/1JX93bVMMuV5178ubpeAT3RXhwCYlEjgq/export?format=pdf'
@@ -237,11 +237,10 @@ export default function Home() {
                                         setTimeout(() => setIsDownloading(false), 2000)
                                     }}
                                     disabled={isDownloading}
-                                    className={`mt-6 text-black font-medium px-8 py-4 rounded-lg transition-colors flex items-center gap-2 ${
-                                        isDownloading 
-                                            ? 'bg-gray-400 cursor-not-allowed' 
+                                    className={`mt-6 text-black font-medium px-8 py-4 rounded-lg transition-colors flex items-center gap-2 ${isDownloading
+                                            ? 'bg-gray-400 cursor-not-allowed'
                                             : 'bg-[#FFAF29] hover:bg-[#e89d24]'
-                                    }`}
+                                        }`}
                                 >
                                     {isDownloading ? (
                                         <>
@@ -275,17 +274,17 @@ export default function Home() {
                                 Projects
                             </p>
                             <Link to="/portfolio">
-                            <button className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors">
-                                <span>→</span>
-                                View all projects
-                            </button>
+                                <button className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors">
+                                    <span>→</span>
+                                    View all projects
+                                </button>
                             </Link>
 
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                            {/* Left Content */}
+                            {/* Content - Order 2 on mobile, 1 on lg */}
                             <motion.div
-                                className="space-y-6"
+                                className="space-y-6 order-2 lg:order-1"
                                 initial={{ opacity: 0, x: -50 }}
                                 animate={project1InView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                                 transition={{ duration: 0.7, ease: "easeOut" }}
@@ -311,24 +310,24 @@ export default function Home() {
                                         The world is evolving rapidly, and so is the way we solve problems. At LawPlus, we recognize that information is everywhere, but true value lies in expertise, judgment, and results. Our mission is to simplify complex legal issues and deliver practical solutions you can rely on.
                                     </p>
 
-                                   <Link to="https://www.lawplusgh.com/">
-                                   <button className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors">
-                                        <span>→</span>
-                                        Visit site
-                                    </button></Link>
+                                    <Link to="https://www.lawplusgh.com/">
+                                        <button className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors">
+                                            <span>→</span>
+                                            Visit site
+                                        </button></Link>
                                 </div>
                             </motion.div>
 
-                            {/* Right Content - Project Mockups */}
+                            {/* Project Mockups - Order 1 on mobile, 2 on lg */}
                             <motion.div
-                                className="relative flex gap-4"
+                                className="relative flex gap-4 order-1 lg:order-2"
                                 initial={{ opacity: 0, x: 50 }}
                                 animate={project1InView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
                             >
 
-                                {/* Main Restaurant Design Mockup */}
-                                <img src={phone} className="w-32 self-center flex-shrink-0" />
+                                {/* Mobile view - hide phone image */}
+                                <img src={phone} className="w-32 self-center flex-shrink-0 hidden lg:block" />
                                 <img src={image} className="w-full max-w-lg flex-shrink-0" />
                             </motion.div>
                         </div>
@@ -340,9 +339,9 @@ export default function Home() {
                 <section ref={project2Ref} className="px-6 py-20 lg:px-12 ">
                     <div className="max-w-7xl mx-auto">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                            {/* Left Content - Project Mockups */}
+                            {/* Project Mockups - Order 2 on mobile, 1 on lg */}
                             <motion.div
-                                className="relative flex "
+                                className="relative flex order-2 lg:order-1"
                                 initial={{ opacity: 0, x: -50 }}
                                 animate={project2InView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                                 transition={{ duration: 0.7, ease: "easeOut" }}
@@ -352,9 +351,9 @@ export default function Home() {
                                 <img src={pos} className="w-full max-w-2xl" />
                             </motion.div>
 
-                            {/* Right Content */}
+                            {/* Content - Order 1 on mobile, 2 on lg */}
                             <motion.div
-                                className="space-y-6"
+                                className="space-y-6 order-1 lg:order-2"
                                 initial={{ opacity: 0, x: 50 }}
                                 animate={project2InView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
@@ -380,41 +379,43 @@ export default function Home() {
                                         The world is evolving rapidly, and so is the way we solve problems. At LawPlus, we recognize that information is everywhere, but true value lies in expertise, judgment, and results. Our mission is to simplify complex legal issues and deliver practical solutions you can rely on.
                                     </p>
 
-                                    <button className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors">
-                                        <span>→</span>
-                                        Visit site
-                                    </button>
+                                    <Link to="https://pos-online-rho.vercel.app/">
+                                        <button className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors">
+                                            <span>→</span>
+                                            Visit site
+                                        </button>
+                                    </Link>
                                 </div>
                             </motion.div>
                         </div>
                     </div>
                 </section>
 
-               
+
                 <section ref={statsRef} className="px-4 py-16 sm:px-6 md:py-20 lg:px-12">
                     <div className="max-w-7xl mx-auto">
-                        <motion.div 
+                        <motion.div
                             className="flex flex-col sm:flex-row gap-2 sm:gap-4"
                             initial={{ opacity: 0, y: 50 }}
                             animate={statsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
                         >
-                        <div className="text-center flex flex-col justify-center bg-[#25262a] text-white shadow-sm rounded-t-3xl sm:rounded-tl-3xl sm:rounded-tr-none sm:rounded-bl-3xl p-8 sm:p-16 md:p-20 lg:p-24">
-                            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold font-heading text-green-400 mb-2 sm:mb-3">20</h3>
-                            <p className="text-sm sm:text-base">Happy Clients</p>
-                        </div>
-                        <div className="text-center flex flex-col justify-center bg-[#25262a] text-white shadow-sm p-8 sm:p-16 md:p-20 lg:p-24">
-                            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold font-heading text-green-400 mb-2 sm:mb-3">15</h3>
-                            <p className="text-sm sm:text-base">Projects Done</p>
-                        </div>
-                        <div className="text-center flex flex-col justify-center bg-[#25262a] text-white shadow-sm p-8 sm:p-16 md:p-20 lg:p-24">
-                            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold font-heading text-green-400 mb-2 sm:mb-3">2+</h3>
-                            <p className="text-sm sm:text-base">Years Experience</p>
-                        </div>
-                        <div className="text-center flex flex-col justify-center bg-[#25262a] text-white shadow-sm rounded-b-3xl sm:rounded-bl-none sm:rounded-tr-3xl sm:rounded-br-3xl p-8 sm:p-16 md:p-20 lg:p-24">
-                            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold font-heading text-green-400 mb-2 sm:mb-3">100%</h3>
-                            <p className="text-sm sm:text-base">Satisfaction</p>
-                        </div>
+                            <div className="text-center flex flex-col justify-center bg-[#25262a] text-white shadow-sm rounded-t-3xl sm:rounded-tl-3xl sm:rounded-tr-none sm:rounded-bl-3xl p-8 sm:p-16 md:p-20 lg:p-24">
+                                <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold font-heading text-green-400 mb-2 sm:mb-3">20</h3>
+                                <p className="text-sm sm:text-base">Happy Clients</p>
+                            </div>
+                            <div className="text-center flex flex-col justify-center bg-[#25262a] text-white shadow-sm p-8 sm:p-16 md:p-20 lg:p-24">
+                                <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold font-heading text-green-400 mb-2 sm:mb-3">10</h3>
+                                <p className="text-sm sm:text-base">Projects Done</p>
+                            </div>
+                            <div className="text-center flex flex-col justify-center bg-[#25262a] text-white shadow-sm p-8 sm:p-16 md:p-20 lg:p-24">
+                                <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold font-heading text-green-400 mb-2 sm:mb-3">4+</h3>
+                                <p className="text-sm sm:text-base">Years Experience</p>
+                            </div>
+                            <div className="text-center flex flex-col justify-center bg-[#25262a] text-white shadow-sm rounded-b-3xl sm:rounded-bl-none sm:rounded-tr-3xl sm:rounded-br-3xl p-8 sm:p-16 md:p-20 lg:p-24">
+                                <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold font-heading text-green-400 mb-2 sm:mb-3">100%</h3>
+                                <p className="text-sm sm:text-base">Satisfaction</p>
+                            </div>
                         </motion.div>
                     </div>
                 </section>
@@ -427,24 +428,24 @@ export default function Home() {
                             <motion.div
                                 className="flex justify-center lg:justify-start"
                                 initial={
-                                    currentTestimonial === 0 
+                                    currentTestimonial === 0
                                         ? { opacity: 0, rotateY: -180 }
-                                        : currentTestimonial === 2 
-                                        ? { opacity: 0, y: 50 }
-                                        : { opacity: 0, scale: 0.8 }
-                                }
-                                animate={
-                                    testimonialInView 
-                                        ? currentTestimonial === 0 
-                                            ? { opacity: 1, rotateY: 0 }
-                                            : currentTestimonial === 2 
-                                            ? { opacity: 1, y: 0 }
-                                            : { opacity: 1, scale: 1 }
-                                        : currentTestimonial === 0 
-                                            ? { opacity: 0, rotateY: -180 }
-                                            : currentTestimonial === 2 
+                                        : currentTestimonial === 2
                                             ? { opacity: 0, y: 50 }
                                             : { opacity: 0, scale: 0.8 }
+                                }
+                                animate={
+                                    testimonialInView
+                                        ? currentTestimonial === 0
+                                            ? { opacity: 1, rotateY: 0 }
+                                            : currentTestimonial === 2
+                                                ? { opacity: 1, y: 0 }
+                                                : { opacity: 1, scale: 1 }
+                                        : currentTestimonial === 0
+                                            ? { opacity: 0, rotateY: -180 }
+                                            : currentTestimonial === 2
+                                                ? { opacity: 0, y: 50 }
+                                                : { opacity: 0, scale: 0.8 }
                                 }
                                 transition={{ duration: 0.6, ease: "easeOut" }}
                                 key={currentTestimonial}
@@ -462,24 +463,24 @@ export default function Home() {
                             <motion.div
                                 className="space-y-6"
                                 initial={
-                                    currentTestimonial === 0 
+                                    currentTestimonial === 0
                                         ? { opacity: 0, rotateX: -90 }
-                                        : currentTestimonial === 2 
-                                        ? { opacity: 0, y: 50 }
-                                        : { opacity: 0, x: 50 }
-                                }
-                                animate={
-                                    testimonialInView 
-                                        ? currentTestimonial === 0 
-                                            ? { opacity: 1, rotateX: 0 }
-                                            : currentTestimonial === 2 
-                                            ? { opacity: 1, y: 0 }
-                                            : { opacity: 1, x: 0 }
-                                        : currentTestimonial === 0 
-                                            ? { opacity: 0, rotateX: -90 }
-                                            : currentTestimonial === 2 
+                                        : currentTestimonial === 2
                                             ? { opacity: 0, y: 50 }
                                             : { opacity: 0, x: 50 }
+                                }
+                                animate={
+                                    testimonialInView
+                                        ? currentTestimonial === 0
+                                            ? { opacity: 1, rotateX: 0 }
+                                            : currentTestimonial === 2
+                                                ? { opacity: 1, y: 0 }
+                                                : { opacity: 1, x: 0 }
+                                        : currentTestimonial === 0
+                                            ? { opacity: 0, rotateX: -90 }
+                                            : currentTestimonial === 2
+                                                ? { opacity: 0, y: 50 }
+                                                : { opacity: 0, x: 50 }
                                 }
                                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                                 key={`content-${currentTestimonial}`}
@@ -506,9 +507,8 @@ export default function Home() {
                                         <button
                                             key={index}
                                             onClick={() => setCurrentTestimonial(index)}
-                                            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                                                index === currentTestimonial ? 'bg-orange-400' : 'bg-gray-600 hover:bg-gray-500'
-                                            }`}
+                                            className={`w-3 h-3 rounded-full transition-colors duration-300 ${index === currentTestimonial ? 'bg-orange-400' : 'bg-gray-600 hover:bg-gray-500'
+                                                }`}
                                             aria-label={`View testimonial ${index + 1}`}
                                         />
                                     ))}
@@ -539,7 +539,7 @@ export default function Home() {
                 {/* Contact Section */}
                 <section ref={contactRef} className="px-4 py-16 sm:px-6 md:py-20 lg:px-12 relative overflow-hidden">
                     {/* Decorative Elements */}
-                    
+
 
                     <motion.div
                         className="max-w-6xl mx-auto text-center relative z-10 bg-[#25262a] rounded-3xl shadow-sm"
@@ -547,19 +547,21 @@ export default function Home() {
                         animate={contactInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        
+
                         <div className="space-y-6 sm:space-y-8 py-12 sm:py-16 px-4 sm:px-6">
                             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-heading">
                                 Lets Work Together
                             </h2>
 
                             <p className="text-white text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-                            Technology is changing how we live, work, and learn. As a software developer, I create simple, reliable, and user-friendly solutions. By working together, we can turn your ideas into real digital products that make an impact.
+                                Technology is changing how we live, work, and learn. As a software developer, I create simple, reliable, and user-friendly solutions. By working together, we can turn your ideas into real digital products that make an impact.
                             </p>
 
+                            <Link to="/contact">
                             <button className="bg-[#FFAF29] hover:bg-[#e89d24] text-black font-medium px-6 py-3 sm:px-8 sm:py-4 rounded-lg transition-colors">
                                 Contact Me
                             </button>
+                            </Link>
                         </div>
                     </motion.div>
                 </section>

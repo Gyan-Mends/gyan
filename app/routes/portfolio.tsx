@@ -123,9 +123,9 @@ export default function Portfolio() {
                 <section ref={project1Ref} className="px-6 py-20 lg:px-12 overflow-hidden">
                     <div className="max-w-7xl mx-auto w-full">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full max-w-full">
-                            {/* Left Content */}
+                            {/* Content - Order 2 on mobile, 1 on lg */}
                             <motion.div
-                                className="space-y-6 w-full max-w-full"
+                                className="space-y-6 w-full max-w-full order-2 lg:order-1"
                                 initial={{ opacity: 0, x: -50 }}
                                 animate={project1InView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                                 transition={{ duration: 0.7, ease: "easeOut" }}
@@ -161,9 +161,9 @@ export default function Portfolio() {
                                 </div>
                             </motion.div>
 
-                            {/* Right Content - Project Mockups */}
+                            {/* Project Mockups - Order 1 on mobile, 2 on lg */}
                             <motion.div
-                                className="relative flex gap-4 w-full max-w-full overflow-hidden"
+                                className="relative flex gap-4 w-full max-w-full overflow-hidden order-1 lg:order-2"
                                 initial={{ opacity: 0, x: 50 }}
                                 animate={project1InView ? { 
                                     opacity: 1, 
@@ -180,7 +180,7 @@ export default function Portfolio() {
                                 }}
                             >
                                 {projects[0].images.phone && (
-                                    <img src={projects[0].images.phone} className="w-24 self-center flex-shrink-0" alt={`${projects[0].title} mobile view`} />
+                                    <img src={projects[0].images.phone} className="w-24 self-center flex-shrink-0 hidden lg:block" alt={`${projects[0].title} mobile view`} />
                                 )}
                                 <img src={projects[0].images.laptop} className="w-full max-w-md flex-shrink-0" alt={`${projects[0].title} desktop view`} />
                             </motion.div>
@@ -192,9 +192,9 @@ export default function Portfolio() {
                 <section ref={project2Ref} className="px-6 py-20 lg:px-12 overflow-hidden">
                     <div className="max-w-7xl mx-auto w-full">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full max-w-full">
-                            {/* Left Content - Project Mockups */}
+                            {/* Project Mockups - Order 2 on mobile, 1 on lg */}
                             <motion.div
-                                className="relative flex w-full max-w-full overflow-hidden"
+                                className="relative flex w-full max-w-full overflow-hidden order-2 lg:order-1"
                                 initial={{ opacity: 0, x: -50 }}
                                 animate={project2InView ? { 
                                     opacity: 1, 
@@ -212,9 +212,9 @@ export default function Portfolio() {
                                 <img src={projects[1].images.laptop} className="w-full max-w-xl" alt={`${projects[1].title} desktop view`} />
                             </motion.div>
 
-                            {/* Right Content */}
+                            {/* Content - Order 1 on mobile, 2 on lg */}
                             <motion.div
-                                className="space-y-6"
+                                className="space-y-6 order-1 lg:order-2"
                                 initial={{ opacity: 0, x: 50 }}
                                 animate={project2InView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
@@ -257,9 +257,9 @@ export default function Portfolio() {
                 <section ref={project3Ref} className="px-6 py-20 lg:px-12 overflow-hidden">
                     <div className="max-w-7xl mx-auto w-full">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full max-w-full">
-                            {/* Left Content */}
+                            {/* Content - Order 2 on mobile, 1 on lg */}
                             <motion.div
-                                className="space-y-6"
+                                className="space-y-6 order-2 lg:order-1"
                                 initial={{ opacity: 0, x: -50 }}
                                 animate={project3InView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                                 transition={{ duration: 0.7, ease: "easeOut" }}
@@ -295,9 +295,9 @@ export default function Portfolio() {
                                 </div>
                             </motion.div>
 
-                            {/* Right Content - Project Mockups */}
+                            {/* Project Mockups - Order 1 on mobile, 2 on lg */}
                             <motion.div
-                                className="relative flex gap-4 w-full max-w-full overflow-hidden"
+                                className="relative flex gap-4 w-full max-w-full overflow-hidden order-1 lg:order-2"
                                 initial={{ opacity: 0, x: 50 }}
                                 animate={project3InView ? { 
                                     opacity: 1, 
@@ -316,7 +316,7 @@ export default function Portfolio() {
                                 }}
                             >
                                 {projects[2].images.phone && (
-                                    <img src={projects[2].images.phone} className="w-24 self-center flex-shrink-0" alt={`${projects[2].title} mobile view`} />
+                                    <img src={projects[2].images.phone} className="w-24 self-center flex-shrink-0 hidden lg:block" alt={`${projects[2].title} mobile view`} />
                                 )}
                                 <img src={projects[2].images.laptop} className="w-full max-w-md flex-shrink-0" alt={`${projects[2].title} desktop view`} />
                             </motion.div>
@@ -328,9 +328,9 @@ export default function Portfolio() {
                 <section ref={project4Ref} className="px-6 py-20 lg:px-12 overflow-hidden">
                     <div className="max-w-7xl mx-auto w-full">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full max-w-full">
-                            {/* Left Content - Project Mockups */}
+                            {/* Project Mockups - Order 2 on mobile, 1 on lg */}
                             <motion.div
-                                className="relative flex w-full max-w-full overflow-hidden"
+                                className="relative flex w-full max-w-full overflow-hidden order-2 lg:order-1"
                                 initial={{ opacity: 0, x: -50 }}
                                 animate={project4InView ? { 
                                     opacity: 1, 
@@ -348,9 +348,9 @@ export default function Portfolio() {
                                 <img src={projects[3].images.laptop} className="w-full max-w-xl" alt={`${projects[3].title} desktop view`} />
                             </motion.div>
 
-                            {/* Right Content */}
+                            {/* Content - Order 1 on mobile, 2 on lg */}
                             <motion.div
-                                className="space-y-6"
+                                className="space-y-6 order-1 lg:order-2"
                                 initial={{ opacity: 0, x: 50 }}
                                 animate={project4InView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
@@ -393,9 +393,9 @@ export default function Portfolio() {
                 <section ref={project5Ref} className="px-6 py-20 lg:px-12 overflow-hidden">
                     <div className="max-w-7xl mx-auto w-full">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full max-w-full">
-                            {/* Left Content */}
+                            {/* Content - Order 2 on mobile, 1 on lg */}
                             <motion.div
-                                className="space-y-6"
+                                className="space-y-6 order-2 lg:order-1"
                                 initial={{ opacity: 0, x: -50 }}
                                 animate={project5InView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                                 transition={{ duration: 0.7, ease: "easeOut" }}
@@ -431,9 +431,9 @@ export default function Portfolio() {
                                 </div>
                             </motion.div>
 
-                            {/* Right Content - Project Mockups */}
+                            {/* Project Mockups - Order 1 on mobile, 2 on lg */}
                             <motion.div
-                                className="relative flex gap-4 w-full max-w-full overflow-hidden"
+                                className="relative flex gap-4 w-full max-w-full overflow-hidden order-1 lg:order-2"
                                 initial={{ opacity: 0, x: 50 }}
                                 animate={project5InView ? { 
                                     opacity: 1, 
@@ -452,7 +452,7 @@ export default function Portfolio() {
                                 }}
                             >
                                 {projects[4].images.phone && (
-                                    <img src={projects[4].images.phone} className="w-24 self-center flex-shrink-0" alt={`${projects[4].title} mobile view`} />
+                                    <img src={projects[4].images.phone} className="w-24 self-center flex-shrink-0 hidden lg:block" alt={`${projects[4].title} mobile view`} />
                                 )}
                                 <img src={projects[4].images.laptop} className="w-full max-w-md flex-shrink-0" alt={`${projects[4].title} desktop view`} />
                             </motion.div>
@@ -464,9 +464,9 @@ export default function Portfolio() {
                 <section ref={project6Ref} className="px-6 py-20 lg:px-12 overflow-hidden">
                     <div className="max-w-7xl mx-auto w-full">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full max-w-full">
-                            {/* Left Content - Project Mockups */}
+                            {/* Project Mockups - Order 2 on mobile, 1 on lg */}
                             <motion.div
-                                className="relative flex w-full max-w-full overflow-hidden"
+                                className="relative flex w-full max-w-full overflow-hidden order-2 lg:order-1"
                                 initial={{ opacity: 0, x: -50 }}
                                 animate={project6InView ? { 
                                     opacity: 1, 
@@ -485,9 +485,9 @@ export default function Portfolio() {
                                 <img src={projects[5].images.laptop} className="w-full max-w-xl" alt={`${projects[5].title} desktop view`} />
                             </motion.div>
 
-                            {/* Right Content */}
+                            {/* Content - Order 1 on mobile, 2 on lg */}
                             <motion.div
-                                className="space-y-6"
+                                className="space-y-6 order-1 lg:order-2"
                                 initial={{ opacity: 0, x: 50 }}
                                 animate={project6InView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
@@ -530,9 +530,9 @@ export default function Portfolio() {
                 <section ref={project7Ref} className="px-6 py-20 lg:px-12 overflow-hidden">
                     <div className="max-w-7xl mx-auto w-full">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full max-w-full">
-                            {/* Left Content */}
+                            {/* Content - Order 2 on mobile, 1 on lg */}
                             <motion.div
-                                className="space-y-6"
+                                className="space-y-6 order-2 lg:order-1"
                                 initial={{ opacity: 0, x: -50 }}
                                 animate={project7InView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                                 transition={{ duration: 0.7, ease: "easeOut" }}
@@ -568,9 +568,9 @@ export default function Portfolio() {
                                 </div>
                             </motion.div>
 
-                            {/* Right Content - Project Mockups */}
+                            {/* Project Mockups - Order 1 on mobile, 2 on lg */}
                             <motion.div
-                                className="relative flex gap-4 w-full max-w-full overflow-hidden"
+                                className="relative flex gap-4 w-full max-w-full overflow-hidden order-1 lg:order-2"
                                 initial={{ opacity: 0, x: 50 }}
                                 animate={project7InView ? { 
                                     opacity: 1, 
@@ -589,7 +589,7 @@ export default function Portfolio() {
                                 }}
                             >
                                 {projects[6].images.phone && (
-                                    <img src={projects[6].images.phone} className="w-24 self-center flex-shrink-0" alt={`${projects[6].title} mobile view`} />
+                                    <img src={projects[6].images.phone} className="w-24 self-center flex-shrink-0 hidden lg:block" alt={`${projects[6].title} mobile view`} />
                                 )}
                                 <img src={projects[6].images.laptop} className="w-full max-w-md flex-shrink-0" alt={`${projects[6].title} desktop view`} />
                             </motion.div>
@@ -601,9 +601,9 @@ export default function Portfolio() {
                 <section ref={project8Ref} className="px-6 py-20 lg:px-12 overflow-hidden">
                     <div className="max-w-7xl mx-auto w-full">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full max-w-full">
-                            {/* Left Content - Project Mockups */}
+                            {/* Project Mockups - Order 2 on mobile, 1 on lg */}
                             <motion.div
-                                className="relative flex w-full max-w-full overflow-hidden"
+                                className="relative flex w-full max-w-full overflow-hidden order-2 lg:order-1"
                                 initial={{ opacity: 0, x: -50 }}
                                 animate={project8InView ? { 
                                     opacity: 1, 
@@ -622,9 +622,9 @@ export default function Portfolio() {
                                 <img src={projects[7].images.laptop} className="w-full max-w-xl" alt={`${projects[7].title} desktop view`} />
                             </motion.div>
 
-                            {/* Right Content */}
+                            {/* Content - Order 1 on mobile, 2 on lg */}
                             <motion.div
-                                className="space-y-6"
+                                className="space-y-6 order-1 lg:order-2"
                                 initial={{ opacity: 0, x: 50 }}
                                 animate={project8InView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
                                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
