@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run typecheck:*)",
+      "Bash(npm run dev:*)",
+      "Read(/C:\\Users\\Nharnhar Qwadwo\\Desktop/**)",
+      "Read(/C:\\Users\\Nharnhar Qwadwo\\Desktop/**)",
+      "Read(/C:\\Users\\Nharnhar Qwadwo\\Pictures\\Screenshots/**)",
+      "Read(/C:\\Users\\Nharnhar Qwadwo\\Pictures\\Screenshots/**)",
+      "Read(/C:\\Users\\Nharnhar Qwadwo\\Pictures\\Screenshots/**)",
+      "Read(/C:\\Users\\Nharnhar Qwadwo\\Pictures\\Screenshots/**)",
+      "Read(/C:\\Users\\Nharnhar Qwadwo\\Pictures\\Screenshots/**)",
+      "Bash(npm install:*)",
+      "Read(/C:\\Users\\Nharnhar Qwadwo\\Desktop/**)",
+      "Bash(node:*)",
+      "Bash(pkill:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
