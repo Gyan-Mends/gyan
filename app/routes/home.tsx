@@ -326,9 +326,9 @@ export default function Home() {
                                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
                             >
 
-                                {/* Mobile view - hide phone image */}
-                                <img src={phone} className="w-32 self-center flex-shrink-0 hidden lg:block" />
-                                <img src={image} className="w-full max-w-lg flex-shrink-0" />
+                                {/* Mobile view - responsive phone image */}
+                                <img src={phone} className="w-16 sm:w-20 md:w-24 lg:w-32 self-center flex-shrink-0" />
+                                <img src={image} className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg flex-shrink-0" />
                             </motion.div>
                         </div>
 
@@ -348,7 +348,7 @@ export default function Home() {
                             >
 
                                 {/* Main Restaurant Design Mockup */}
-                                <img src={pos} className="w-full max-w-2xl" />
+                                <img src={pos} className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl" />
                             </motion.div>
 
                             {/* Content - Order 1 on mobile, 2 on lg */}

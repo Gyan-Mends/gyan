@@ -5,7 +5,6 @@ import { Link } from "react-router";
 const navigation = [
     { name: "Home", to: "/", isExternal: true },
     { name: "Portfolio", to: "/portfolio", isExternal: true },
-    { name: "Contact", to: "/contact", isExternal: true },
 ];
 
 export default function Navigation() {
@@ -31,13 +30,13 @@ export default function Navigation() {
     };
 
     return (
-        <header className="absolute top-0 left-0 right-0 z-50 transition-all duration-300 p-4">
+        <header className="fixed bg-[#25262a] top-0 left-0 right-0 z-50 transition-all duration-300 px-4 py-4">
             <div className="max-w-7xl mx-auto">
-                <div className={` px-6 py-3 transition-all duration-300 ${mobileMenuOpen ? 'rounded-2xl lg:rounded-full' : 'rounded-full'}`}>
+                <div className={`bg-[#25262a] backdrop-blur-lg  px-6  transition-all duration-300 ${mobileMenuOpen ? 'rounded-2xl lg:rounded-full' : 'rounded-full'}`}>
                     <div className="flex items-center justify-between">
                         <Link 
                             to="/" 
-                            className="flex items-center space-x-2 transform hover:scale-105 transition-transform duration-200"
+                            className="flex text-white text-4xl font-italic items-center space-x-2 transform hover:scale-105 transition-transform duration-200"
                         >
                             GM
                         </Link>
@@ -69,11 +68,13 @@ export default function Navigation() {
                         </nav>
 
                         {/* Contact Button */}
+                        <Link to="/contact">
                         <div className="hidden lg:flex items-center">
                             <button className="bg-[#FFAF29] text-black px-6 py-2 rounded-full  transition-colors duration-300 font-medium">
                                 CONTACT
                             </button>
                         </div>
+                        </Link>
 
                         {/* Mobile Menu Button */}
                         <button

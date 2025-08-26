@@ -180,9 +180,9 @@ export default function Portfolio() {
                                 }}
                             >
                                 {projects[0].images.phone && (
-                                    <img src={projects[0].images.phone} className="w-24 self-center flex-shrink-0 hidden lg:block" alt={`${projects[0].title} mobile view`} />
+                                    <img src={projects[0].images.phone} className="w-12 sm:w-16 md:w-20 lg:w-24 self-center flex-shrink-0" alt={`${projects[0].title} mobile view`} />
                                 )}
-                                <img src={projects[0].images.laptop} className="w-full max-w-md flex-shrink-0" alt={`${projects[0].title} desktop view`} />
+                                <img src={projects[0].images.laptop} className="w-full max-w-xs sm:max-w-sm md:max-w-md flex-shrink-0" alt={`${projects[0].title} desktop view`} />
                             </motion.div>
                         </div>
                     </div>
@@ -209,7 +209,7 @@ export default function Portfolio() {
                                     scale: { duration: 0.4, delay: 0.3 }
                                 }}
                             >
-                                <img src={projects[1].images.laptop} className="w-full max-w-xl" alt={`${projects[1].title} desktop view`} />
+                                <img src={projects[1].images.laptop} className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl" alt={`${projects[1].title} desktop view`} />
                             </motion.div>
 
                             {/* Content - Order 1 on mobile, 2 on lg */}
@@ -316,9 +316,9 @@ export default function Portfolio() {
                                 }}
                             >
                                 {projects[2].images.phone && (
-                                    <img src={projects[2].images.phone} className="w-24 self-center flex-shrink-0 hidden lg:block" alt={`${projects[2].title} mobile view`} />
+                                    <img src={projects[2].images.phone} className="w-12 sm:w-16 md:w-20 lg:w-24 self-center flex-shrink-0" alt={`${projects[2].title} mobile view`} />
                                 )}
-                                <img src={projects[2].images.laptop} className="w-full max-w-md flex-shrink-0" alt={`${projects[2].title} desktop view`} />
+                                <img src={projects[2].images.laptop} className="w-full max-w-xs sm:max-w-sm md:max-w-md flex-shrink-0" alt={`${projects[2].title} desktop view`} />
                             </motion.div>
                         </div>
                     </div>
@@ -345,7 +345,7 @@ export default function Portfolio() {
                                     scale: { duration: 0.4, delay: 0.4 }
                                 }}
                             >
-                                <img src={projects[3].images.laptop} className="w-full max-w-xl" alt={`${projects[3].title} desktop view`} />
+                                <img src={projects[3].images.laptop} className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl" alt={`${projects[3].title} desktop view`} />
                             </motion.div>
 
                             {/* Content - Order 1 on mobile, 2 on lg */}
@@ -452,9 +452,9 @@ export default function Portfolio() {
                                 }}
                             >
                                 {projects[4].images.phone && (
-                                    <img src={projects[4].images.phone} className="w-24 self-center flex-shrink-0 hidden lg:block" alt={`${projects[4].title} mobile view`} />
+                                    <img src={projects[4].images.phone} className="w-12 sm:w-16 md:w-20 lg:w-24 self-center flex-shrink-0" alt={`${projects[4].title} mobile view`} />
                                 )}
-                                <img src={projects[4].images.laptop} className="w-full max-w-md flex-shrink-0" alt={`${projects[4].title} desktop view`} />
+                                <img src={projects[4].images.laptop} className="w-full max-w-xs sm:max-w-sm md:max-w-md flex-shrink-0" alt={`${projects[4].title} desktop view`} />
                             </motion.div>
                         </div>
                     </div>
@@ -482,7 +482,7 @@ export default function Portfolio() {
                                     x: { duration: 0.8, delay: 0.5 }
                                 }}
                             >
-                                <img src={projects[5].images.laptop} className="w-full max-w-xl" alt={`${projects[5].title} desktop view`} />
+                                <img src={projects[5].images.laptop} className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl" alt={`${projects[5].title} desktop view`} />
                             </motion.div>
 
                             {/* Content - Order 1 on mobile, 2 on lg */}
@@ -589,9 +589,9 @@ export default function Portfolio() {
                                 }}
                             >
                                 {projects[6].images.phone && (
-                                    <img src={projects[6].images.phone} className="w-24 self-center flex-shrink-0 hidden lg:block" alt={`${projects[6].title} mobile view`} />
+                                    <img src={projects[6].images.phone} className="w-12 sm:w-16 md:w-20 lg:w-24 self-center flex-shrink-0" alt={`${projects[6].title} mobile view`} />
                                 )}
-                                <img src={projects[6].images.laptop} className="w-full max-w-md flex-shrink-0" alt={`${projects[6].title} desktop view`} />
+                                <img src={projects[6].images.laptop} className="w-full max-w-xs sm:max-w-sm md:max-w-md flex-shrink-0" alt={`${projects[6].title} desktop view`} />
                             </motion.div>
                         </div>
                     </div>
@@ -619,7 +619,7 @@ export default function Portfolio() {
                                     x: { duration: 0.7, delay: 0.6 }
                                 }}
                             >
-                                <img src={projects[7].images.laptop} className="w-full max-w-xl" alt={`${projects[7].title} desktop view`} />
+                                <img src={projects[7].images.laptop} className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl" alt={`${projects[7].title} desktop view`} />
                             </motion.div>
 
                             {/* Content - Order 1 on mobile, 2 on lg */}

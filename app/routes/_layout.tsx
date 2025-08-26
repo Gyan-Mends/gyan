@@ -12,11 +12,7 @@ export default function AppLayout() {
              <footer className="bg-[#25262a] text-white py-8 px-6 lg:px-12">
                 <div className="max-w-7xl mx-auto">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                        {/* Logo */}
-                        <div className="flex items-center gap-3">
-                           
-                            <span className="text-xl font-bold text-white">Mends</span>
-                        </div>
+                        
                         
                         {/* Copyright */}
                         <div className="text-center">
