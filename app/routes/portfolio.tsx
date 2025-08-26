@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
+import { Link } from "react-router"
 import image from "../components/images/Macbook-Air-www.lawplusgh.com.png"
 import phone from "../components/images/iPhone-13-PRO-www.lawplusgh.com.png"
 import pos from "../components/images/Macbook-Air-pos-online-rho.vercel.app.png"
@@ -151,13 +152,12 @@ export default function Portfolio() {
                                         {projects[0].description}
                                     </p>
 
-                                    <button 
-                                        onClick={() => window.open(projects[0].link, '_blank')}
-                                        className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors"
-                                    >
-                                        <span>→</span>
-                                        Visit site
-                                    </button>
+                                    <Link to={projects[0].link} target="_blank" rel="noopener noreferrer">
+                                        <button className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors">
+                                            <span>→</span>
+                                            Visit site
+                                        </button>
+                                    </Link>
                                 </div>
                             </motion.div>
 
@@ -240,13 +240,12 @@ export default function Portfolio() {
                                         {projects[1].description}
                                     </p>
 
-                                    <button 
-                                        onClick={() => window.open(projects[1].link, '_blank')}
-                                        className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors"
-                                    >
-                                        <span>→</span>
-                                        Visit site
-                                    </button>
+                                    <Link to={projects[1].link} target="_blank" rel="noopener noreferrer">
+                                        <button className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors">
+                                            <span>→</span>
+                                            Visit site
+                                        </button>
+                                    </Link>
                                 </div>
                             </motion.div>
                         </div>
@@ -285,13 +284,12 @@ export default function Portfolio() {
                                         {projects[2].description}
                                     </p>
 
-                                    <button 
-                                        onClick={() => window.open(projects[2].link, '_blank')}
-                                        className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors"
-                                    >
-                                        <span>→</span>
-                                        View project
-                                    </button>
+                                    <Link to={projects[2].link} target="_blank" rel="noopener noreferrer">
+                                        <button className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors">
+                                            <span>→</span>
+                                            View project
+                                        </button>
+                                    </Link>
                                 </div>
                             </motion.div>
 
@@ -376,13 +374,12 @@ export default function Portfolio() {
                                         {projects[3].description}
                                     </p>
 
-                                    <button 
-                                        onClick={() => window.open(projects[3].link, '_blank')}
-                                        className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors"
-                                    >
-                                        <span>→</span>
-                                        View project
-                                    </button>
+                                    <Link to={projects[3].link} target="_blank" rel="noopener noreferrer">
+                                        <button className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors">
+                                            <span>→</span>
+                                            View project
+                                        </button>
+                                    </Link>
                                 </div>
                             </motion.div>
                         </div>
@@ -421,13 +418,12 @@ export default function Portfolio() {
                                         {projects[4].description}
                                     </p>
 
-                                    <button 
-                                        onClick={() => window.open(projects[4].link, '_blank')}
-                                        className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors"
-                                    >
-                                        <span>→</span>
-                                        View project
-                                    </button>
+                                    <Link to={projects[4].link} target="_blank" rel="noopener noreferrer">
+                                        <button className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors">
+                                            <span>→</span>
+                                            View project
+                                        </button>
+                                    </Link>
                                 </div>
                             </motion.div>
 
@@ -513,13 +509,12 @@ export default function Portfolio() {
                                         {projects[5].description}
                                     </p>
 
-                                    <button 
-                                        onClick={() => window.open(projects[5].link, '_blank')}
-                                        className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors"
-                                    >
-                                        <span>→</span>
-                                        View project
-                                    </button>
+                                    <Link to={projects[5].link} target="_blank" rel="noopener noreferrer">
+                                        <button className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors">
+                                            <span>→</span>
+                                            View project
+                                        </button>
+                                    </Link>
                                 </div>
                             </motion.div>
                         </div>
@@ -558,13 +553,12 @@ export default function Portfolio() {
                                         {projects[6].description}
                                     </p>
 
-                                    <button 
-                                        onClick={() => window.open(projects[6].link, '_blank')}
-                                        className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors"
-                                    >
-                                        <span>→</span>
-                                        Visit site
-                                    </button>
+                                    <Link to={projects[6].link} target="_blank" rel="noopener noreferrer">
+                                        <button className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors">
+                                            <span>→</span>
+                                            Visit site
+                                        </button>
+                                    </Link>
                                 </div>
                             </motion.div>
 
@@ -650,13 +644,12 @@ export default function Portfolio() {
                                         {projects[7].description}
                                     </p>
 
-                                    <button 
-                                        onClick={() => window.open(projects[7].link, '_blank')}
-                                        className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors"
-                                    >
-                                        <span>→</span>
-                                        Visit site
-                                    </button>
+                                    <Link to={projects[7].link} target="_blank" rel="noopener noreferrer">
+                                        <button className="text-orange-400 hover:text-orange-300 font-medium flex items-center gap-2 mx-auto lg:mx-0 transition-colors">
+                                            <span>→</span>
+                                            Visit site
+                                        </button>
+                                    </Link>
                                 </div>
                             </motion.div>
                         </div>
@@ -681,9 +674,11 @@ export default function Portfolio() {
                                 I'm always excited to work on new projects and challenges.
                             </p>
 
-                            <button className="bg-[#FFAF29] hover:bg-[#e89d24] text-black font-medium px-8 py-4 rounded-lg transition-colors">
-                                Start a Project
-                            </button>
+                            <Link to="/contact">
+                                <button className="bg-[#FFAF29] hover:bg-[#e89d24] text-black font-medium px-8 py-4 rounded-lg transition-colors">
+                                    Start a Project
+                                </button>
+                            </Link>
                         </div>
                     </motion.div>
                 </section>
