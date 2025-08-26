@@ -65,7 +65,7 @@ export default function Home() {
     }, [testimonials.length])
 
     return (
-        <div className="min-h-screen bg-[#25262a]">
+        <div className="min-h-screen bg-[#25262a] pt-10 lg:pt-4 ">
             <section ref={heroRef} className="relative text-white px-4 pt-16 pb-16 sm:px-6 md:pt-20 md:pb-20 lg:px-12 lg:pt-32">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
