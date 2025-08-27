@@ -13,7 +13,9 @@
       "Bash(npm install:*)",
       "Read(/C:\\Users\\Nharnhar Qwadwo\\Desktop/**)",
       "Bash(node:*)",
-      "Bash(pkill:*)"
+      "Bash(pkill:*)",
+      "Bash(move:*)",
+      "Bash(mv:*)"
     ],
     "deny": [],
     "ask": []
